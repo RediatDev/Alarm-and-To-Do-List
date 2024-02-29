@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Rediat ToDo List and Alarm</title>
+</head>
+<body>
+
+     <h1 class="text-center m-3 text-decoration-underline">
+        Engineering of Catalyst and Reaction kinetics laboratory 
+     </h1> 
+
+    <div class="d-flex">
+        <div>
+            <img src="./image/personal passport size photographs.jpg" alt="">
+        </div>
+        <div class="m-5">
+            <h2>
+                Name:&nbspRediat Terefe
+            </h2>
+            <h2>
+                Department:&nbspChemical Engineering
+            </h2>
+            <h2>
+                Guide : &nbspProf.Prakash Biswas
+            </h2>
+            <h2>
+                Research Title : &nbspValorization of biomass to furan compounds and conversion of furfural to furfural alcohol
+            </h2>
+        </div>
+        
+    </div>
+    <div class="d-flex">
+ <section class="sectionOne col-md-6 col-sm-12">
+    <h1 class="text-center ">Tasks Of The Day And Machine Running</h1>
+    <div class="mytodo-list">
+        <form action="javascript:void(0);" id="CreateForm">
+            <input type="text" id="add-task" placeholder="your task here">
+            <div>
+
+                <input id="button" type="submit" onclick="CreateTask()" value="Create">
+            </div>
+
+        </form>
+        <form action="javascript:void(0);" id="UpdateForm">
+            <input type="text" id="update-task">
+            <div class="d-flex gap-2 col-3 py-4 mx-auto">
+                <input type="submit" value="Update">
+                <a href="#" onclick="CloseInput()" id="close">&#10006;</a>
+            </div>
+        </form>
+        <p id="counter"></p>
+        <table class="">
+            <tr class="m-3">
+                <th>Rediat Todo List</th>
+                <hr>
+            </tr>
+            <tbody id="mytodo-tasks"></tbody>
+        </table>
+    </div>
+ </section>
+
+    <section class="sectionTwo col-md-6 col-sm-12 ">
+        <h2>Set Alarm</h2>
+        <label for="alarmTime">Time:</label>
+        <input type="time" id="alarmTime">
+        <label for="alarmNote">Reminder Note:</label>
+        <input type="text" id="alarmNote">
+        <button onclick="addAlarm()">Set Alarm</button>
+    
+        <h2>Alarms List</h2>
+        <ul id="alarmsList"></ul>
+        <audio id="alarmSound" src="audio/-154921.mp3" preload="auto"></audio>
+
+    <audio id="alarmSound" src="audio/-154921.mp3" preload="auto"></audio>
+    </section>
+
+</div>
+</body>
+</html>
